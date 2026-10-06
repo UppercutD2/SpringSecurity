@@ -1,4 +1,4 @@
-package com.example.SpringSecurityV2.security;
+/*package com.example.SpringSecurityV2.security;
 
 import com.example.SpringSecurityV2.services.PersonDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,3 +45,4 @@ public class AuthenticationProviderImpl implements AuthenticationProvider {
         return true;
     }
 }
+*/

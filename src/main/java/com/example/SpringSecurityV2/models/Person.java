@@ -1,8 +1,10 @@
 package com.example.SpringSecurityV2.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="person")
@@ -14,10 +16,12 @@ public class Person {
     private int id;
 
     @Column(name="username")
+    @Size(min=2,max=100,message =" Username length (2-100)")
     @NotEmpty
     private String username;
 
     @Column(name="year_of_birth")
+    @Min(value=1900,message="Earliest can be 1900 year")
     @NotNull
     private int birthYear;
 
