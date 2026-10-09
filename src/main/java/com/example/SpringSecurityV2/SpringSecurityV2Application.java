@@ -2,12 +2,19 @@ package com.example.SpringSecurityV2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 @SpringBootApplication
 public class SpringSecurityV2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityV2Application.class, args);
+
+
+
+        SpringApplication.run(SpringSecurityV2Application.class, args);
 	}
 
 }

@@ -47,10 +47,13 @@ public class AuthController {
     public String completeRegistration(@ModelAttribute("person") @Valid Person person,
                                        BindingResult bindingResult)
     {
+
                 personValidator.validate(person,bindingResult);///check for occupied username.
 
-                if(bindingResult.hasErrors())
+                if(bindingResult.hasErrors()) {
+                    System.out.println("Some Errors");
                     return "/authenticate/registration";
+                }
 
             registrationService.register(person);
             return "redirect:/authenticate/login";

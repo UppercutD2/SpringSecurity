@@ -6,9 +6,10 @@
 </head>
 <body>
  shas raspechatalis dannie usera
-
  <br/>
- <a href="/logout"> Logout and return to Login Page </a>
+<form  th:action="@{/logout}" th:method="POST">
+    <input type="submit" value ="Выйди вон!"/>
+</form>
 
 </body>
 </html>
